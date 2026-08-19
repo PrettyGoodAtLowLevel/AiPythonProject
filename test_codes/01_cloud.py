@@ -19,15 +19,15 @@ basicQuestion = str(input("Enter Your Question"))
 results = memories.query(query_texts = [basicQuestion], n_results=3)
 
 #make big question out of memories
-mems = results["documents"][0]
-memory_text = " ".join(mems)
+remember = results["documents"][0]
+memory_text = " ".join(remember)
 finalQuestion = memory_text + " " + basicQuestion
 
-#create ai
+#create AI
 client = OpenAI(base_url= "https://api.groq.com/openai/v1",
 api_key=os.getenv("GITHUB_TOKEN"),)
 
-#ask ai big question and print message
+#ask AI big question and print message
 add_memory(memories, f"previous conversation question: {finalQuestion}")
 r = client.chat.completions.create(model="llama-3.3-70b-versatile",
 messages=[{"role": "user", "content": finalQuestion}],)
