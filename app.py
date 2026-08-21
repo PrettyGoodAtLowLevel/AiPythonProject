@@ -138,11 +138,11 @@ if user_input:
             st.success(f"Stored {n} chunks inside of the chat, from {user_input.files[0].name}")
 
 #respond to text
-if user_input.text:
+if user_input:
     #get basic prompt with AI settings
     prompt = user_input.text
     st.session_state.messages.append({"role": "user", "content": prompt})
-    extendedPrompt = f"My name is: {name}, you, as the ai, your preset is {preset}, your creativity is {creativity}/1.0, prompt is {prompt}"
+    extendedPrompt = f"My name is: {name}, you, as the ai, your preset is {preset}, your creativity is {creativity}/1.0, prompt is {prompt or "Nothing"}"
     client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=key or st.secrets["GITHUB_TOKEN"],)
 
     with st.chat_message("user"):
