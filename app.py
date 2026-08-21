@@ -136,6 +136,7 @@ if user_input:
         with st.spinner(f"Processing {user_input.files[0].name}.."):
             n = store_document(user_input.files[0])
             st.success(f"Stored {n} chunks inside of the chat, from {user_input.files[0].name}")
+            st.rerun()
 
 #respond to text
 if user_input:
