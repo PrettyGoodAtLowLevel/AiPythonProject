@@ -138,7 +138,7 @@ if user_input:
             st.success(f"Stored {n} chunks inside of the chat, from {user_input.files[0].name}")
 
 #respond to text
-if user_input:
+if user_input.text:
     #get basic prompt with AI settings
     prompt = user_input.text
     st.session_state.messages.append({"role": "user", "content": prompt})
