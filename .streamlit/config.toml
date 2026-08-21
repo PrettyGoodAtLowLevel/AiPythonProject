@@ -1,0 +1,21 @@
+[theme]
+
+base = "dark"
+
+primaryColor = "#000505"
+backgroundColor = "#000505"
+
+secondaryBackgroundColor = "#5D5D81"
+textColor = "#FFFFFF"
+
+borderColor = "#000505"
+font = "Mojangles"
+
+headingFont = "Mojangles"
+baseRadius = "full"
+
+[[theme.fontFaces]]
+family = "Mojangles"
+url = "Minecraft.ttf"
+weight = 400
+style = "normal"
