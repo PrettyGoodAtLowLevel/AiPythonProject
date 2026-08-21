@@ -107,7 +107,7 @@ with st.sidebar:
         st.write(f"Saved Settings, my name is {name}, your preset is {preset}, and your creativity is {creativity}")
 
 #system prompt, prompt engineer to your desire
-SYSTEM_PROMPT = (f"You are a Minecraft AI, you are very good at minecraft and your preset is {preset}."
+SYSTEM_PROMPT = (f"You are a Minecraft AI, you are very good at minecraft."
                  "You Must only discuss things related to Minecraft."
                  "You can give links and community resources related to Minecraft."
                  "You can also always give ideas to the user on the topic they are asking about,"
